@@ -49,7 +49,7 @@
             var poo = document.getElementById('poo');
             var pooClass = poo.className
 
-            if (userAgent.indexOf('iphone') || userAgent.indexOf('ipad')) {
+            if (userAgent.indexOf('iphone') !== -1 || userAgent.indexOf('ipad') !== -1) {
                 poo.className = pooClass + ' styled-poo';
             }
         </script>
