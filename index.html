@@ -8,18 +8,50 @@
         <style>
             body {
                 background: #f1f1f1;
-                margin: 0;                
+                margin: 0;
             }
 
             h1 {
                 color: rgba(0,0,0,0.9);
-                font: 26vh "Helvetica Neue", Arial, sans-serif;
-                text-align: center;
+                font: 72px/1em "Helvetica Neue", Arial, sans-serif;
+                margin: 40px auto;
+                position: relative;
+                text-align: right;
+                width: 200px;
+            }
+
+            .pile-of-poo {
+                font-size: 112px;
+                /*height: 40px;*/
+                left: 40px;
+                line-height: 1em;
+                position: absolute;
+            }
+
+            .styled-poo {
+                height: 40px;
+                left: 80px;
+                line-height: 0px;
+                top: -30px;
+                -webkit-transform: scale(7);
             }
         </style>
     </head>
 
     <body>
-        <h1>&#x1f4a9;&#8482;</h1>
+        <h1>
+            <span id="poo" class="pile-of-poo">&#x1f4a9;</span>
+            &#8482;
+        </h1>
+
+        <script type="text/javascript">
+            var userAgent = (window.navigator.userAgent).toString().toLowerCase();
+            var poo = document.getElementById('poo');
+            var pooClass = poo.className
+
+            if (userAgent.indexOf('iphone') || userAgent.indexOf('ipad')) {
+                poo.className = pooClass + ' styled-poo';
+            }
+        </script>
     </body>
 </html>
